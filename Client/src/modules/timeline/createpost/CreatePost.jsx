@@ -47,7 +47,7 @@ export const CreatePost = (props) => {
       formData.append('location', data.location);
       formData.append('taggedPerson', data.taggedPerson);
       setProgress(30)
-      const responseImg = await fetch('http://localhost:5000/api/post/uploadimage', {
+      const responseImg = await fetch('https://rajpoliceuserapi.onrender.com/api/post/uploadimage', {
         method: 'POST',
         headers: {
           "auth-token": localStorage.getItem('token')

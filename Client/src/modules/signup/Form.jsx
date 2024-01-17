@@ -43,7 +43,7 @@ export const Form = (props) => {
         console.log(otpToSave);
         setGeneratedOtp(otpToSave);
 
-        const response = await fetch('http://localhost:5000/api/auth/sendotp', {
+        const response = await fetch('https://rajpoliceuserapi.onrender.com/api/auth/sendotp', {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
@@ -80,7 +80,7 @@ export const Form = (props) => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         if (!isSignInPage && (enteredOtp === generatedOtp)) {
-            const response = await fetch('http://localhost:5000/api/auth/createuser', {
+            const response = await fetch('https://rajpoliceuserapi.onrender.com/api/auth/createuser', {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",
@@ -102,7 +102,7 @@ export const Form = (props) => {
             }
         }
         else if (isSignInPage) {
-            const response = await fetch('http://localhost:5000/api/auth/login', {
+            const response = await fetch('https://rajpoliceuserapi.onrender.com/api/auth/login', {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",

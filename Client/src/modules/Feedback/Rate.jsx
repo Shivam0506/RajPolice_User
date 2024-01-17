@@ -66,7 +66,7 @@ const FeedbackForm = () => {
     
         // Implement the logic to submit userResponses to your backend
         console.log('User Responses:', feedbackData);
-        const response = await fetch('http://localhost:5000/api/feedback/submitFeedback', {
+        const response = await fetch('https://rajpoliceuserapi.onrender.com/api/feedback/submitFeedback', {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",

@@ -52,7 +52,7 @@ const NewPost = ({  postId, user, imageUrl, caption, location, taggedPerson, dat
 
   const likePost = async () => {
     try {
-      const response = await fetch(`http://localhost:5000/api/post/${postId}/like`, {
+      const response = await fetch(`https://rajpoliceuserapi.onrender.com/api/post/${postId}/like`, {
         method: 'PUT',
         headers: {
           'Content-Type': 'application/json',

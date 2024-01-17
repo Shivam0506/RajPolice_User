@@ -9,7 +9,7 @@ export const PostState = (props) => {
     // Fetch all posts for feed
     const fetchallPosts = async () => {
         // API call
-        const response = await fetch('http://localhost:5000/api/post/fetchallposts', {
+        const response = await fetch('https://rajpoliceuserapi.onrender.com/api/post/fetchallposts', {
             method: "GET",
             headers: {
                 "Content-Type": "application/json"

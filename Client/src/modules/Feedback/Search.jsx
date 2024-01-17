@@ -31,7 +31,7 @@ import { Button, Tooltip } from '@mui/material';
 
    // Get all policestations...
    const getComplaintbyId = async ()=>{
-    const response = await fetch(`http://localhost:5000/api/complaint/policeStationNames`,{
+    const response = await fetch(`https://rajpoliceuserapi.onrender.com/api/complaint/policeStationNames`,{
         method: "GET",
         headers: {
             "Content-Type": "application/json",

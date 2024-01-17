@@ -7,7 +7,7 @@ const router = express.Router();
 // MongoDb Database Routes
 const Feedback = require('../models/feedback.js')
 
-// fetch all the policestations names http://localhost:5000/api/feedback/submitFeedback
+// fetch all the policestations names https://rajpoliceuserapi.onrender.com/api/feedback/submitFeedback
 router.post('/submitFeedback', async (req, res) => {
     try {
         const feedback = new Feedback(req.body);

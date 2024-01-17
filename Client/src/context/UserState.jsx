@@ -8,7 +8,7 @@ export const UserState = (props) => {
     // Get User Info from anywhere
     const getUserInfo = async () => {
         // API call
-        const response = await fetch('http://localhost:5000/api/auth/getuser', {
+        const response = await fetch('https://rajpoliceuserapi.onrender.com/api/auth/getuser', {
             method: "GET",
             headers: {
                 "Content-Type": "application/json",

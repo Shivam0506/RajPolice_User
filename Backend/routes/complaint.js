@@ -39,7 +39,7 @@ router.get('/fetchallcomplaints', fetchuser,async(req, res)=>{
     }
   })
 
-  // fetch all the policestations names http://localhost:5000/api/complaint/policeStationNames
+  // fetch all the policestations names https://rajpoliceuserapi.onrender.com/api/complaint/policeStationNames
   router.get('/policeStationNames', async (req, res) => {
     try {
       const policeStationNames = await Incharge.find().distinct('policeStationName');

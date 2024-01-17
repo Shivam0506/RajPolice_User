@@ -18,7 +18,7 @@ export const ViewComplaints = () => {
 
     const getComplaints = async() => {
         // API call
-        const response = await fetch('http://localhost:5000/api/complaint/fetchallcomplaints', {
+        const response = await fetch('https://rajpoliceuserapi.onrender.com/api/complaint/fetchallcomplaints', {
             method: "GET",  
             headers: {
               "Content-Type": "application/json",
