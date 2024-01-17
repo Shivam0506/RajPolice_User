@@ -6,49 +6,50 @@ import { PropTypes } from 'prop-types'
 import InfiniteScroll from "react-infinite-scroll-component";
 import Spinner from "../Spinner"
 import MobileHeader from "../navigation/MobileHeader";
+import Feed from "./Feed";
 
 const Timeline=(props)=> {
-  const apiKey = "3416bdf6a26d4a7a827f649ec2139a04";
-  const [articles, setArticles] = useState([{}]);
+//   const apiKey = "3416bdf6a26d4a7a827f649ec2139a04";
+//   const [articles, setArticles] = useState([{}]);
   const [loading, setLoading] = useState(true);
-  const [page, setPage] = useState(1);
-  const [totalResults, setTotalResults] = useState(0);
+//   const [page, setPage] = useState(1);
+//   const [totalResults, setTotalResults] = useState(0);
 
-  const updateNews = async ()=> {
-    props.setProgress(10);
-    const url = `https://newsapi.org/v2/top-headlines?country=${props.country}&category=${props.category}&apiKey=${apiKey}&page=${page}&pageSize=${props.pageSize}`; 
-    setLoading(true)
-    let data = await fetch(url);
-    props.setProgress(30);
-    let parsedData = await data.json()
-    props.setProgress(70);
-    setArticles(parsedData.articles)
-    setTotalResults(parsedData.totalResults)
-    setLoading(false)
-    props.setProgress(100);
+//   const updateNews = async ()=> {
+//     props.setProgress(10);
+//     const url = `https://newsapi.org/v2/top-headlines?country=${props.country}&category=${props.category}&apiKey=${apiKey}&page=${page}&pageSize=${props.pageSize}`; 
+//     setLoading(true)
+//     let data = await fetch(url);
+//     props.setProgress(30);
+//     let parsedData = await data.json()
+//     props.setProgress(70);
+//     setArticles(parsedData.articles)
+//     setTotalResults(parsedData.totalResults)
+//     setLoading(false)
+//     props.setProgress(100);
 
-}
-
-
-useEffect(() => {
-    updateNews(); 
-}, [])
+// }
 
 
-const handleNext = async() => {
-  props.setProgress(10);
-  setPage(page+1)
-  const url = `https://newsapi.org/v2/top-headlines?country=${props.country}&category=${props.category}&apiKey=${apiKey}&page=${page+1}&pageSize=${props.pageSize}`;
-  setLoading(true)
-  let data = await fetch(url);
-  props.setProgress(30);
-  let res = await data.json();
-  props.setProgress(70);
-  setArticles(articles.concat(res.articles));
-  setTotalResults(res.totalResults);
-  setLoading(false);
-  props.setProgress(100);
-}
+// useEffect(() => {
+//     updateNews(); 
+// }, [])
+
+
+// const handleNext = async() => {
+//   props.setProgress(10);
+//   setPage(page+1)
+//   const url = `https://newsapi.org/v2/top-headlines?country=${props.country}&category=${props.category}&apiKey=${apiKey}&page=${page+1}&pageSize=${props.pageSize}`;
+//   setLoading(true)
+//   let data = await fetch(url);
+//   props.setProgress(30);
+//   let res = await data.json();
+//   props.setProgress(70);
+//   setArticles(articles.concat(res.articles));
+//   setTotalResults(res.totalResults);
+//   setLoading(false);
+//   props.setProgress(100);
+// }
 
 
   return (
@@ -56,13 +57,13 @@ const handleNext = async() => {
       <div className="timeline__left mt-12">
         <div className="timeline__posts">
         <MobileHeader />
-        <InfiniteScroll
-            dataLength={articles.length}
-            next={handleNext}
-            hasMore={articles.length !== totalResults}
-            loader={loading && <Spinner/>}
-        >
-          {articles.map((ele, i) => (
+        {/* <InfiniteScroll
+            // dataLength={articles.length}
+            // next={handleNext}
+            // hasMore={articles.length !== totalResults}
+            // loader={loading && <Spinner/>}
+        > */}
+          {/* {articles.map((ele, i) => (
             <Post
               key={i}
               user={ele.author?ele.author:"Unknown"}
@@ -73,9 +74,10 @@ const handleNext = async() => {
               timestamp={ele.publishedAt}
               postUrl={ele.url}
             />
-          ))}
+          ))} */}
+          <Feed/>
           
-        </InfiniteScroll>
+        {/* </InfiniteScroll> */}
         </div>
       </div>
       <div className="timeline__right fixed top-0 mt-12 right-0 bg-white h-full p-4 ps-12">

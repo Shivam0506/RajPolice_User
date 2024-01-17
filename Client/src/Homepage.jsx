@@ -57,9 +57,10 @@ const App = () => {
         <div className="homepage__timeline mx-auto">
           <Routes>
             <Route exact path="/" element={<Timeline setProgress={setProgress} />} />
+            {/* <Route exact path="/" element={<>Hello Ji</>} /> */}
             <Route exact path="/search" element={<Search />} />
             <Route path='/createpost' element={<CreatePost setProgress={setProgress} />} />
-            <Route path='/feed' element={<Feed />} />
+            {/* <Route path='/feed' element={<Feed />} /> */}
             <Route exact path="/system/rate/:id" element={<Rate />} />
             <Route exact path="/system/Complaint/:id" element={<Complaint />} />
             <Route exact path="/talkto/ai" element={<AIBot />} />
