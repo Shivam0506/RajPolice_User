@@ -1,6 +1,6 @@
 import React from "react";
 import { Component } from "react";
-import loading from '../assets/Spinner.gif'
+import loading from '../../public/assets/Spinner.gif'
 
 export default class NewsItem extends Component {
     render(){

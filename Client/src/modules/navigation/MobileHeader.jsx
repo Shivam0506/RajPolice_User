@@ -2,7 +2,7 @@ import React from "react";
 import ChatIcon from "@mui/icons-material/Chat";
 import AddCircleOutlineIcon from "@mui/icons-material/AddCircleOutline";
 import MenuIcon from "@mui/icons-material/Menu";
-import logo from '../../assets/rajPoliceLogo.jpg';
+import logo from '../../../public/assets/rajPoliceLogo.jpg';
 import { Link } from "react-router-dom";
 
 const MobileHeader = () => {

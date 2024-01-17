@@ -52,7 +52,7 @@ function Sidenav() {
     <div className="sidenav">
       <img
         className="sidenav__logo mx-auto my-12"
-        src="..\..\src\assets\rajPoliceLogo.jpg"
+        src="..\..\src\public/assets\rajPoliceLogo.jpg"
         alt="Logo"
       />
       {/* <LanguageToggle /> */}
